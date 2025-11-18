@@ -1,5 +1,7 @@
 <?php
 
+use Jemer\TinyCms\Commands\MakePageCommand;
+use Jemer\TinyCms\Commands\MakePostCommand;
 use Jemer\TinyCms\Commands\PageCommand;
 use Jemer\TinyCms\Commands\PostCommand;
 use Jemer\TinyCms\Commands\ServeCommand;
@@ -19,9 +21,12 @@ ConfigLoader::Load(PathHelper::BuildPath([
 
 $app = new Application();
 
+$app->add(new MakePostCommand());
+$app->add(new MakePageCommand());
 $app->add(new ServeCommand());
-$app->add(new PageCommand());
-$app->add(new PostCommand());
+
+
+
 
 $app->run();
 

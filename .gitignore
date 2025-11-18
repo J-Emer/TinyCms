@@ -1,4 +1,5 @@
 /vendor/
+/content/
 /logs/
 /theme/cache/
 /.idea/
