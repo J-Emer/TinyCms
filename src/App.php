@@ -23,9 +23,9 @@ class App
 
         // $this->router->get('/', "MainController@index");
         $this->router->get('/page/{slug}', "MainController@page");
-        // $this->router->get('/post/{slug}', "MainController@post");
-        // $this->router->get('/category/{slug}', "MainController@category");//---gets all posts in a specific category
-        // $this->router->get('/categories', "MainController@categories");//---gets all of the categories
+        $this->router->get('/post/{slug}', "MainController@post");
+        $this->router->get('/category/{slug}', "MainController@category");//---gets all posts in a specific category
+        $this->router->get('/categories', "MainController@categories");//---gets all of the categories
 
         // //---todo password protect the admin section
 

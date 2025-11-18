@@ -1,0 +1,40 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+    {{ page.title|default('Posts List') }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ page.title|default('Posts List') }}</h1>
+
+    {# Categories section #}
+    {% if categories is not empty %}
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul class="category-list">
+                {% for cat in categories %}
+                    <li>
+                        <a href="/category/{{ cat|url_encode }}">
+                            {{ cat|capitalize }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {# Post list section #}
+    {% if posts is not empty %}
+        <ul class="post-list">
+            {% for post in posts %}
+                <li>
+                    <a href="/post/{{ post.slug }}">
+                        {{ post.title|capitalize }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No posts found.</p>
+    {% endif %}
+{% endblock %}

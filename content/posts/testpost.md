@@ -1,6 +1,7 @@
 ---
 title: TestPost
 slug: testpost
-isnav: false
+template: post
+category: testing
 ---
-Page content here.
+Post content here.

@@ -62,7 +62,7 @@ class PageLoader
             if($page->isnav)
             {
                 $nav[] = [
-                    "slug" => $page->slug,
+                    "slug" => "page/" . $page->slug,
                     "title" => $page->title
                 ];
             }
