@@ -18,7 +18,6 @@ content:
 theme:
   name: "default"
   path: "/theme/default"
-  admin_path: "/theme/admin"
 
 markdown:
   parser: "Parsedown"

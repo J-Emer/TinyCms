@@ -68,10 +68,13 @@ class PageLoader
             }
         }
 
-        $nav[] = [
-            "slug" => "categories",
-            "title" => "Categories"
-        ];
+        if(ConfigLoader::Get('site.CatinNav'))
+        {
+            $nav[] = [
+                "slug" => "categories",
+                "title" => "Categories"
+            ];
+        }
 
         return $nav;
     }
