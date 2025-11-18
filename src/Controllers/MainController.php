@@ -2,6 +2,8 @@
 
 namespace Jemer\TinyCms\Controllers;
 
+use Jemer\TinyCms\Helpers\Logger;
+use Jemer\TinyCms\Loaders\ConfigLoader;
 use Jemer\TinyCms\Loaders\PageLoader;
 use Jemer\TinyCms\Loaders\PostLoader;
 use Jemer\TinyCms\Loaders\TemplateLoader;
@@ -18,6 +20,15 @@ class MainController
         $this->pageLoader = new PageLoader();
         $this->postLoader = new PostLoader();
         $this->templateLoader = new TemplateLoader();
+
+        Logger::info("info");
+        Logger::warning("warning");
+        Logger::error("error");
+    }
+
+    public function index()
+    {
+        header("location: " . ConfigLoader::Get('site.homepage'));
     }
 
     public function page(string $slug)
