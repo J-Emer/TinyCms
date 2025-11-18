@@ -2,8 +2,6 @@
 
 use Jemer\TinyCms\Commands\MakePageCommand;
 use Jemer\TinyCms\Commands\MakePostCommand;
-use Jemer\TinyCms\Commands\PageCommand;
-use Jemer\TinyCms\Commands\PostCommand;
 use Jemer\TinyCms\Commands\ServeCommand;
 use Jemer\TinyCms\Helpers\PathHelper;
 use Jemer\TinyCms\Loaders\ConfigLoader;

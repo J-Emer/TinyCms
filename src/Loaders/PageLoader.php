@@ -68,6 +68,11 @@ class PageLoader
             }
         }
 
+        $nav[] = [
+            "slug" => "categories",
+            "title" => "Categories"
+        ];
+
         return $nav;
     }
 }
