@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+    <h1>{{ post.title }}</h1>
+    <p class="post-meta">
+        Published on {{ post.date|date("F j, Y") }}
+        {% if post.category %} | Category: {{ post.category }}{% endif %}
+    </p>
+    <div class="post-content">
+        {{ post.content|raw }}
+    </div>
+</article>
+{% endblock %}
