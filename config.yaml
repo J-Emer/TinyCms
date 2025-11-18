@@ -1,0 +1,34 @@
+site:
+  version: "0.0.1"
+  name: "My Flatfile CMS"
+  tagline: "A lightweight, database-free content system"
+  base_url: "http://localhost:8000"
+  theme: "default"
+  timezone: "America/Chicago"
+  language: "en"
+  CatinNav: true
+  homepage: /page/home
+
+content:
+  path: "content"
+  pages_dir: "pages"
+  posts_dir: "posts"
+  file_extension: ".md"
+
+theme:
+  name: "default"
+  path: "/theme/default"
+  admin_path: "/theme/admin"
+
+markdown:
+  parser: "Parsedown"
+  allow_html: false
+
+cache:
+  enabled: true
+  path: "cache"
+  ttl: 3600   # seconds (1 hour)
+
+debug:
+  enabled: true
+  show_errors: true

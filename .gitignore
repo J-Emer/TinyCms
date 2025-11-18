@@ -1,0 +1,8 @@
+/vendor/
+/logs/
+/theme/cache/
+/.idea/
+/.vscode/
+/.cache/
+notes.md
+composer.lock   # optional to ignore

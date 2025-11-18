@@ -1,0 +1,39 @@
+├─ Tiny.php
+├─ bootstrap.php
+├─ composer.json
+├─ composer.lock
+├─ config.yaml
+├─ content
+│   ├─ images
+│   │   ├─ halloween.jpg
+│   │   ├─ table.jpg
+│   │   └─ wizard.jpg
+│   ├─ pages
+│   │   ├─ about.md
+│   │   ├─ contact.md
+│   │   ├─ home.md
+│   │   ├─ portfolio.md
+│   │   ├─ services.md
+│   │   └─ test.md
+│   └─ posts
+│       ├─ 5-tips-on-doors.md
+│       ├─ benefits-of-flatfile-cms.md
+│       ├─ modern-kitchen-trends.md
+│       ├─ sustainable-building-materials.md
+│       ├─ testpost.md
+│       └─ tips-for-small-remodels.md
+├─ dir_structure.php
+├─ directory_structure.txt
+├─ index.php
+├─ logs
+│   └─ server.log
+├─ notes.md
+├─ src
+│   └─ App.php
+├─ theme
+└─ users
+    ├─ john.yaml
+    ├─ lisa.yaml
+    ├─ mark.yaml
+    ├─ mary.yaml
+    └─ peter.yaml
