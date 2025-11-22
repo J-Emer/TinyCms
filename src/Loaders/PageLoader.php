@@ -19,7 +19,7 @@ class PageLoader
         ]);
     }
 
-    public function GetPage(string $slug) : object
+    public function GetPage(string $slug) : ?object
     {
         $path = PathHelper::BuildPath([
             $this->pageDir,
@@ -29,8 +29,13 @@ class PageLoader
         return $this->LoadFile($path);
     }
 
-    private function LoadFile(string $path) : object
+    private function LoadFile(string $path) : ?object
     {
+        if(!file_exists($path))
+        {
+            return null;
+        }
+
         $fileContent = file_get_contents($path);
 
         $parser = new Parser();

@@ -26,7 +26,7 @@ class App
         $this->router->get('/post/{slug}', "MainController@post");
         $this->router->get('/category/{slug}', "MainController@category");//---gets all posts in a specific category
         $this->router->get('/categories', "MainController@categories");//---gets all of the categories
-
+        $this->router->set404("MainController@notFound");
     }
 
     public function Run()

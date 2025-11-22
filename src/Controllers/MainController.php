@@ -31,9 +31,15 @@ class MainController
         header("location: " . ConfigLoader::Get('site.homepage'));
     }
 
-    public function page(string $slug)
+    public function page(string $slug) 
     {
         $page = $this->pageLoader->GetPage($slug);
+
+        if($page === null)
+        {
+            $this->notFound();
+        }
+
         $nav = $this->pageLoader->GetNav();
 
         $this->templateLoader->Render($page->template . ".twig", [
@@ -45,6 +51,12 @@ class MainController
     public function post(string $slug)
     {
         $post = $this->postLoader->GetPost($slug);
+
+        if($post === null)
+        {
+            $this->notFound();
+        }
+
         $nav = $this->pageLoader->GetNav();
 
         $template = $post->template ?? 'post';
@@ -75,6 +87,12 @@ class MainController
             "categories" => $categories,
             "nav" => $nav
         ]);
+    }
+
+    public function notFound()
+    {
+        echo "---not found---";
+        die;
     }
 }
 

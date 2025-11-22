@@ -19,7 +19,7 @@ class PostLoader
         ]);
     }
 
-    public function GetPost(string $slug) : object
+    public function GetPost(string $slug) : ?object
     {
         $path = PathHelper::BuildPath([
             $this->postDir,
@@ -78,8 +78,13 @@ class PostLoader
         return array_unique($categories);
     }
 
-    private function LoadFile(string $path) : object
+    private function LoadFile(string $path) : ?object
     {
+        if(!file_exists($path))
+        {
+            return null;
+        }
+
         $fileContent = file_get_contents($path);
 
         $parser = new Parser();
